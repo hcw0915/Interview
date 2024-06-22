@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">5/8外出確認表</div>
+      <div class="content">
+        <ol class="shop-list">
+          <li class="item">麵包</li>
+          <li class="item">短袖衣服</li>
+          <li class="item">飲用水</li>
+          <li class="item">帳篷</li>
+        </ol>
+        <ul class="shop-list">
+          <li class="item">暈車藥</li>
+          <li class="item">感冒藥</li>
+          <li class="item">丹木斯</li>
+          <li class="item">咳嗽糖漿</li>
+        </ul>
+      </div>
+      <div class="footer">以上僅供參考</div>
+    </div>
+
+    <pre>
+      A1. 
+        - 可以使用 `!important` , 
+        - 減少 `.container .shop-list li.item` 的 tagName 減少權重.
+        - 增加 `.container .shop-list .item` 的權重 可以使用 id, tagName, inline 等等方式.
+    </pre>
+
+    <pre>
+      A2. 
+        - 可以使用 `nth-child()` `nth-of-type()` odd / even 或是自己加入運算
+        - 運用 JS 可以做到. 拿取目標元素 DOM List, 在遍歷去條件設置顏色
+    </pre>
+  </body>
+
+  <style>
+    .container {
+      font-size: 14px;
+    }
+    .container .header {
+      font-size: 18px;
+    }
+    .container .shop-list {
+      list-style: none;
+      margin-left: -15px;
+    }
+
+    .container .shop-list li.item {
+      color: green;
+    }
+    .container .shop-list .item {
+      color: blue;
+    }
+
+    .item:nth-child(odd) {
+      background: #e9e9e9;
+    }
+  </style>
+</html>
